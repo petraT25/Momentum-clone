@@ -1,0 +1,11 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    background-color: rgba(0, 0, 255, 0.775);
+    color: #fff;
+    height: 100vh;
+}
