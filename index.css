@@ -9,3 +9,30 @@
     color: #fff;
     height: 100vh;
 }
+
+.greeting_weather {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 80vh;
+    text-align: center;
+}
+
+.greeting {
+    background-color: blueviolet;
+    width: 65vw;
+    justify-content: center;
+    align-items: center;
+    margin: auto 5rem;
+}
+
+.weather {
+    background-color: chartreuse;
+    width: 35vw;
+}
+
+.saying {
+    background-color: crimson;
+    width: 100vw;
+    height: 20vh;
+}
