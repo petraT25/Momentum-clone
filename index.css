@@ -1,11 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+
+:root {
+    --text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.809);
+    --hover-color: rgba(39, 8, 8, 0.3);
+  }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+body {
+    overflow: hidden;
+}
+
 .container-fluid {
-    background-color: rgba(0, 0, 255, 0.775);
+    background-image:url("/day6.jpg");
+    background-color: rgba(74, 88, 14, 0.204);
+    background-blend-mode:overlay;
+    background-position:bottom;
+    background-size: cover;
     color: #fff;
     height: 100vh;
 }
@@ -19,20 +34,141 @@
 }
 
 .greeting {
-    background-color: blueviolet;
+    background-color: rgba(8, 0, 15, 0);
     width: 65vw;
     justify-content: center;
     align-items: center;
-    margin: auto 5rem;
+    padding: auto 5rem;
+    transition: 0.5s ease-in-out;
+}
+
+.greeting:hover {
+    transition: 0.5s ease-in-out;
+    background: var(--hover-color);
+    
+   
 }
 
 .weather {
-    background-color: chartreuse;
+    border-left: 10px solid rgba(25, 25, 25, 0.809);
     width: 35vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-in-out;
+}
+
+.weather:hover {
+    transition: 0.5s ease-in-out;
+    background: var(--hover-color);
+}
+
+.description {
+    font-size: 1.3rem;
+    padding-top: 1rem;
+    text-shadow: var(--text-shadow);
+}
+
+#city_weather {
+    font-size: 1.8rem;
+    padding-bottom: 2rem;
+    text-shadow: var(--text-shadow);
+}
+
+#temperature {
+    font-size: 4rem;
+    font-weight: 800;
+    text-shadow: var(--text-shadow);
+}
+
+
+#greet {
+    margin-top: 5rem;
+    font-size: 4.2rem;
+    font-weight: 600;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    letter-spacing: 3px;
+    padding: 2rem;
+    text-shadow: var(--text-shadow);
+}
+
+#currently {
+    font-size: 1.5rem;
+    text-shadow: var(--text-shadow);
+}
+
+#date {
+    font-size: 2.2rem;
+    padding: 1.8rem;
+    text-shadow: var(--text-shadow);
+}
+
+#clock {
+    font-size: 6rem;
+    font-weight: 800;
+    padding-bottom: 2.5rem;
+    text-shadow: var(--text-shadow);
+    letter-spacing: 5px;
 }
 
 .saying {
-    background-color: crimson;
+    border-top: 10px solid rgba(25, 25, 25, 0.809);
     width: 100vw;
     height: 20vh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    text-shadow: var(--text-shadow);
+    background-color: rgba(0, 0, 12, 0.211);
+    transition: 0.5s ease-in-out;
 }
+
+.saying:hover {
+    background-color: var(--hover-color);
+    transition: 0.5s ease-in-out;
+}
+
+.saying_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    margin: auto 0;
+    width: 100vw;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+#saying_paragraph {
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+}
+
+#author {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+button {
+    width: 30px;
+    height: 30px;
+    border-radius: 1rem;
+    color: #fff;
+    background-color: rgba(7, 7, 95, 0.598);
+    cursor: pointer;
+    border: none;
+    position: absolute;
+    bottom: 7.5vh;
+    right: 30vw;
+}
+
+
+
+
+
+
+
+

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/f9846e6bad.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./index.css">
     <title>Clock App</title>
 </head>
@@ -11,21 +12,28 @@
     <div class="container-fluid">
         <div class="greeting_weather">
         <div class="greeting">
-            <h4 id="greet">Good morning</h4>
+            <p id="greet"></p>
             <p id="currently">It is currently</p>
-            <h2 id="date"></h2>
-            <h1 id="clock"></h1>
-            
+            <p id="date"></p>
+            <p id="clock"></p>
         </div>
         <div class="weather">
-            <div class="icon"></div>
-            <p id="city_weather"></p>
-            <p id="temperature"></p>
+            
+            <p id="city_weather">Gornji Grad, Croatia</p>
+            <p id="temperature">-7°C</p>
+            <div class="description">Fog</div>
         </div>
         </div>
         <div class="saying">
-            <p id="saying_paragraph">some saying.....................</p>
+            <div class="saying_inner">
+                <p id="saying_paragraph"></p>
+                <p id="author"></p>
+            </div>
+            
+             <!--  <button><i class="fas fa-redo"></i></button>-->
+            
         </div>
+        
     </div>
 
     <script src="./index.js"></script>
