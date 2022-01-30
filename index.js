@@ -75,7 +75,7 @@ setInterval(greetFunc, 1000);
 
 //GET WEATHER DATA
 async function getWeather() {
-    const url = `http://api.weatherapi.com/v1/current.json?key=bce5781048194d4fbad170845222401&q=auto:ip&aqi=no`;
+    const url = `https://api.weatherapi.com/v1/current.json?key=bce5781048194d4fbad170845222401&q=auto:ip&aqi=no`;
     const response = await fetch(url);
     const data = await response.json();
     console.log(data);
