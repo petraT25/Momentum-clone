@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
 
 :root {
-    --text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.809);
+    --text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.9);
     --hover-color: rgba(39, 8, 8, 0.3);
+    --border-color: 10px solid rgba(25, 25, 25, 0.5);
+    --transition: 0.5s ease-in-out;
+    --color-white: rgb(255, 255, 255);
   }
 
 * {
@@ -12,14 +15,21 @@
 }
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
+}
+
+.fa-sun {
+    color: rgba(255, 255, 0, 0.85);
+}
+
+.fa-moon {
+    color: rgba(255, 187, 0, 0.85);
 }
 
 .container-fluid {
-    background-image:url("/day6.jpg");
-    background-color: rgba(74, 88, 14, 0.204);
-    background-blend-mode:overlay;
-    background-position:bottom;
+    background-color: rgba(21, 20, 34, 0.25);
+    background-blend-mode: overlay;
+    background-position: bottom;
     background-size: cover;
     color: #fff;
     height: 100vh;
@@ -27,66 +37,30 @@ body {
 
 .greeting_weather {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100vw;
-    height: 80vh;
+    height: 60vh;
     text-align: center;
 }
 
 .greeting {
-    background-color: rgba(8, 0, 15, 0);
-    width: 65vw;
-    justify-content: center;
-    align-items: center;
-    padding: auto 5rem;
-    transition: 0.5s ease-in-out;
-}
-
-.greeting:hover {
-    transition: 0.5s ease-in-out;
-    background: var(--hover-color);
-    
-   
-}
-
-.weather {
-    border-left: 10px solid rgba(25, 25, 25, 0.809);
-    width: 35vw;
+    width: 100vw;
+    padding-top: 2rem;
+    padding-bottom: 10%;
+    transition: var(--transition);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    transition: 0.5s ease-in-out;
+    justify-content: center;
 }
-
-.weather:hover {
-    transition: 0.5s ease-in-out;
-    background: var(--hover-color);
-}
-
-.description {
-    font-size: 1.3rem;
-    padding-top: 1rem;
-    text-shadow: var(--text-shadow);
-}
-
-#city_weather {
-    font-size: 1.8rem;
-    padding-bottom: 2rem;
-    text-shadow: var(--text-shadow);
-}
-
-#temperature {
-    font-size: 4rem;
-    font-weight: 800;
-    text-shadow: var(--text-shadow);
-}
-
 
 #greet {
-    margin-top: 5rem;
-    font-size: 4.2rem;
-    font-weight: 600;
+    margin-top: 4rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
     font-family: 'Mochiy Pop P One', sans-serif;
     letter-spacing: 3px;
     padding: 2rem;
@@ -94,76 +68,345 @@ body {
 }
 
 #currently {
-    font-size: 1.5rem;
+    font-size: 0.9rem;
     text-shadow: var(--text-shadow);
 }
 
 #date {
-    font-size: 2.2rem;
+    font-size: 1.1rem;
     padding: 1.8rem;
+    letter-spacing: 1px;
     text-shadow: var(--text-shadow);
 }
 
 #clock {
-    font-size: 6rem;
+    font-size: 2rem;
     font-weight: 800;
-    padding-bottom: 2.5rem;
     text-shadow: var(--text-shadow);
     letter-spacing: 5px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+.weather {
+    width: 100vw;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    transition: var(--transition);
+}
+
+#description {
+    font-size: 0.9rem;
+    text-shadow: var(--text-shadow);
+}
+
+#city_weather {
+    font-size: 1.2rem;
+    padding-bottom: 1.5rem;
+    text-shadow: var(--text-shadow);
+}
+
+#temperature {
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-shadow: var(--text-shadow);
 }
 
 .saying {
-    border-top: 10px solid rgba(25, 25, 25, 0.809);
     width: 100vw;
     height: 20vh;
     display: flex;
-    flex-direction: row;
-    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    bottom: 0;
+    text-align: center;
     text-shadow: var(--text-shadow);
-    background-color: rgba(0, 0, 12, 0.211);
-    transition: 0.5s ease-in-out;
+    transition: var(--transition);
 }
 
 .saying:hover {
-    background-color: var(--hover-color);
-    transition: 0.5s ease-in-out;
-}
-
-.saying_inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 0.5rem;
-    margin: auto 0;
-    width: 100vw;
-    text-align: center;
-    border-radius: 1rem;
+    cursor: pointer;
 }
 
 #saying_paragraph {
-    font-size: 1.1rem;
+    width: 80vw;
+    font-size: 0.9rem;
     font-style: italic;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 0.8rem;
+    padding-top: 1rem;
 }
 
 #author {
     font-size: 0.8rem;
-    font-weight: 700;
+    font-weight: 500;
+    
 }
 
 button {
+    display: block;
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
     width: 30px;
     height: 30px;
-    border-radius: 1rem;
-    color: #fff;
-    background-color: rgba(7, 7, 95, 0.598);
+    border-radius: 5px;
+    color: var(--color-white);
+    background-color: rgba(255, 255, 255, 0);
     cursor: pointer;
     border: none;
-    position: absolute;
-    bottom: 7.5vh;
-    right: 30vw;
+    transition: 0.3s ease-in-out;
 }
+
+button:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+
+button i {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+hr {
+    width: 70vw;
+    height: 10px;
+    background-color: var(--color-white);
+}
+
+
+
+/*MEDIA QUERY 450 - 750px*/
+@media only screen and (min-width: 450px) {
+  hr {
+    width: 50vw;
+  }
+
+  #greet {
+     font-size: 2.3rem;
+  }
+
+  #currently {
+     font-size: 1.1rem;
+  }
+
+  #date {
+     font-size: 1.4rem;
+  }
+
+  #clock {
+    font-size: 2.5rem;
+  }
+
+  #description {
+    font-size: 1rem;
+  }
+
+  #city_weather {
+    font-size: 1.4rem;
+  }
+
+  #temperature {
+    font-size: 2.5rem;
+  }
+
+  #saying_paragraph {
+    font-size: 1rem;
+  }
+
+  #author {
+    font-size: 0.9rem; 
+  }
+
+  button i {
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+}
+
+/* Media query 750 - 1000px*/
+
+@media only screen and (min-width: 750px) {
+    
+    .greeting_weather {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100vw;
+        height: 80vh;
+    }
+    
+    .greeting {
+        align-items: center;
+        justify-content: center;
+        width: 65vw;
+        height: 80vh;
+        border-bottom: var(--border-color);
+    }
+
+    .greeting:hover {
+        transition: var(--transition);
+        background: var(--hover-color);
+    }
+    
+    hr {
+       display: none;
+    }
+    
+    #greet {
+        margin-top: 2rem;
+        font-size: 2.5rem;
+        font-weight: 600;
+    }
+    
+    #currently {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+    
+    #date {
+        font-size: 1.5rem; 
+    }
+    
+    #clock {
+        font-size: 3rem;
+    }
+    
+    .weather {
+        border-bottom: var(--border-color);
+        border-left: var(--border-color);
+        width: 35vw;
+        height: 80vh;
+    }
+
+    .weather:hover {
+        transition: var(--transition);
+        background: var(--hover-color);
+    }
+    
+    #description {
+        font-size: 1rem;
+    }
+    
+    #city_weather {
+        font-size: 1.3rem;
+        font-weight: 600;
+        padding-bottom: 3.5rem;
+    }
+    
+    #temperature {
+        font-size: 2.5rem;
+    }
+
+    .saying:hover {
+        background-color: var(--hover-color);
+        transition: var(--transition)
+    }
+    
+    #saying_paragraph {
+        font-size: 1rem;
+    }
+    
+    #author {
+        font-size: 0.8rem;
+    }
+    
+    button i {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    #greet {
+        font-size: 3rem;
+        font-weight: 700;
+    }
+    
+    #currently {
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+    
+    #date {
+        font-size: 1.8rem; 
+    }
+    
+    #clock {
+        font-size: 4rem;
+    }
+    
+    #description {
+        font-size: 1.2rem;
+    }
+    
+    #city_weather {
+        font-size: 1.6rem;
+        font-weight: 600;
+        padding-bottom: 3.5rem;
+    }
+    
+    #temperature {
+        font-size: 2.8rem;
+    }
+    
+    #saying_paragraph {
+        font-size: 1.2rem;
+    }
+    
+    #author {
+        font-size: 0.9rem;
+    }
+    
+    button i {
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+    #greet {
+        font-size: 4rem;
+    }
+    
+    #currently {
+        font-size: 1.5rem;
+    }
+    
+    #date {
+        font-size: 2.2rem; 
+    }
+    
+    #clock {
+        font-size: 5rem;
+    }
+    
+    #description {
+        font-size: 1.4rem;
+    }
+    
+    #city_weather {
+        font-size: 2rem;
+    }
+    
+    #temperature {
+        font-size: 3.5rem;
+    }
+    
+    #saying_paragraph {
+        font-size: 1.4rem;
+    }
+    
+    #author {
+        font-size: 1rem;
+    }
+}
+
+
 
 
 

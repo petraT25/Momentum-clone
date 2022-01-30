@@ -11,29 +11,29 @@
 <body>
     <div class="container-fluid">
         <div class="greeting_weather">
-        <div class="greeting">
-            <p id="greet"></p>
-            <p id="currently">It is currently</p>
-            <p id="date"></p>
-            <p id="clock"></p>
-        </div>
-        <div class="weather">
-            
-            <p id="city_weather">Gornji Grad, Croatia</p>
-            <p id="temperature">-7°C</p>
-            <div class="description">Fog</div>
-        </div>
-        </div>
-        <div class="saying">
-            <div class="saying_inner">
-                <p id="saying_paragraph"></p>
-                <p id="author"></p>
+            <div class="greeting">
+                <p id="greet">Goood Afternoon!</p>
+                <p id="currently">It is currently</p>
+                <p id="date"></p>
+                <p id="clock"></p>
             </div>
-            
-             <!--  <button><i class="fas fa-redo"></i></button>-->
-            
+
+            <hr>
+
+            <div class="weather">
+                <p id="city_weather">Croatia</p>
+                <div id="description"></div>
+                <p id="temperature">0°C</p>
+            </div>
+
+            <hr>
         </div>
         
+        <div class="saying" onclick="getSaying()">
+            <p id="saying_paragraph"></p>
+            <p id="author" class="show"></p>
+            <button onclick="getSaying()"><i class="fas fa-redo"></i></button>
+        </div>
     </div>
 
     <script src="./index.js"></script>
