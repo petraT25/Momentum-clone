@@ -30,7 +30,6 @@ function greetFunc() {
   const date = new Date();
   const hours = date.getHours();
 
-  
   if (hours >= 5 && hours < 12) {
     greet.innerHTML = '<i class="fas fa-sun"></i> Good Morning!';
     document.querySelector(".container-fluid").style.backgroundImage =
@@ -39,19 +38,14 @@ function greetFunc() {
     greet.innerHTML = '<i class="fas fa-sun"></i> Good Afternoon!';
     document.querySelector(".container-fluid").style.backgroundImage =
       'url("./AFTERNOON2.jpg")';
-  } else if (hours >= 19 && hours < 5) {
+  } else {
     greet.innerHTML = '<i class="fas fa-moon"></i> Good Evening!';
     document.querySelector(".container-fluid").style.backgroundImage =
       'url("./NIGHT.jpg")';
-  } else {
-    greet.innerHTML = "Hello!";
-    document.querySelector(".container-fluid").style.backgroundImage =
-      'url("./AFTERNOON.jpg")';
   }
 }
 
 setInterval(greetFunc, 1000);
-
 
 //GET WEATHER DATA
 async function getWeather() {
