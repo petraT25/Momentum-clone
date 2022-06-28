@@ -179,6 +179,10 @@ hr {
     background-color: var(--color-white);
 }
 
+#attribution {
+    font-size: 0.6rem;
+}
+
 
 
 /*MEDIA QUERY 450 - 750px*/
